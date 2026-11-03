@@ -9,14 +9,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Shippori+Mincho:wght@500&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--night:#0A1F27;--teal:#0D2B31;--gold:#C9AA72;--fg:#FFFFFF;--muted:rgba(255,255,255,.66);--line:rgba(201,170,114,.45);--bad:#F0907E}
+:root{--night:#2A5670;--teal:#336580;--gold:#C9AA72;--fg:#FFFFFF;--muted:rgba(255,255,255,.66);--line:rgba(201,170,114,.45);--bad:#F0907E}
 *{box-sizing:border-box}
 html,body{margin:0;min-height:100%}
 body{min-height:100vh;min-height:100dvh;display:grid;grid-template-columns:minmax(0,1fr);place-items:center;padding:24px 20px;overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%;color:var(--fg);font-family:"Noto Sans JP",sans-serif;
   background:
     linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px) 0 0/40px 40px,
     linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px) 0 0/40px 40px,
-    radial-gradient(ellipse 70% 50% at 30% 30%,rgba(46,104,112,.45),transparent 70%),
+    radial-gradient(ellipse 70% 50% at 30% 30%,rgba(120,172,204,.35),transparent 70%),
     linear-gradient(180deg,var(--night),var(--teal))}
 .card{width:100%;max-width:420px;min-width:0;text-align:center}
 .en{font-family:"Cormorant Garamond",serif;font-size:13px;letter-spacing:.24em;margin:0;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;justify-content:center;gap:14px}
@@ -25,7 +25,7 @@ h1{font-family:"Shippori Mincho",serif;font-weight:500;font-size:clamp(19px,6.2v
 .lead{font-size:13px;color:var(--muted);line-height:1.9;margin:0 0 30px}
 form{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;text-align:left}
 label{font-size:13px;letter-spacing:.08em;color:var(--muted)}
-.pw{display:flex;border:1px solid var(--line);background:rgba(10,31,39,.6)}
+.pw{display:flex;border:1px solid var(--line);background:rgba(30,62,82,.5)}
 .pw:focus-within{border-color:var(--gold)}
 .pw input{flex:1;min-width:0;border:0;outline:0;background:transparent;color:var(--fg);font:inherit;font-size:17px;letter-spacing:.1em;padding:13px 14px;min-height:50px}
 .pw button{border:0;background:transparent;color:var(--gold);font:inherit;font-size:13px;padding:0 14px;cursor:pointer}
@@ -33,7 +33,7 @@ label{font-size:13px;letter-spacing:.08em;color:var(--muted)}
 .keep input{accent-color:var(--gold);width:16px;height:16px}
 .go{display:grid;grid-template-columns:minmax(0,1fr);gap:10px;margin-top:6px}
 .go p{margin:0 0 2px;font-size:13px;letter-spacing:.08em;color:var(--muted)}
-.go button{display:grid;gap:2px;justify-items:center;border:0;background:var(--gold);color:#0A1F27;font:inherit;min-height:60px;padding:10px 12px;cursor:pointer;transition:background .3s}
+.go button{display:grid;gap:2px;justify-items:center;border:0;background:var(--gold);color:#1F2D3A;font:inherit;min-height:60px;padding:10px 12px;cursor:pointer;transition:background .3s}
 .go button:hover{background:#D8BD8A}
 .go button b{font-family:"Shippori Mincho",serif;font-weight:500;font-size:17px;letter-spacing:.2em}
 .go button small{font-size:11px;letter-spacing:.06em;opacity:.8}
@@ -61,7 +61,7 @@ label{font-size:13px;letter-spacing:.08em;color:var(--muted)}
   </form>
 </div>
 <script>
-const P = {"v":2,"iter":310000,"salt":"6NBQDp/CxHrHMlnkTQaKmA==","check":{"iv":"hQlgPktImlSskUue","ct":"3tsFBTSpHH8NXikYAg6GtUty"},"cases":[{"id":"d","label":"D案","note":"動画トップ／企業情報・物件情報の切り替え","src":"d.json"},{"id":"e","label":"E案","note":"D案をもとに、コンテンツにメリハリ","src":"e.json"}]};
+const P = {"v":2,"iter":310000,"salt":"cMVeIG4Av9qYCdm/zFDPvw==","check":{"iv":"bcqExBEq58C3o5vW","ct":"dnW9bTKqbWsCorgrLDE2+mjI"},"cases":[{"id":"d","label":"D案","note":"動画トップ／企業情報・物件情報の切り替え","src":"d.json"},{"id":"e","label":"E案","note":"D案をもとに、コンテンツにメリハリ","src":"e.json"}]};
 const b64 = (s) => Uint8Array.from(atob(s), (c) => c.charCodeAt(0));
 const KEY = 'design-preview-d-key', LAST = 'design-preview-case';
 const multi = Array.isArray(P.cases);
